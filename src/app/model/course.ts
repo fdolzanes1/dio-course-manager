@@ -1,6 +1,6 @@
 export class Course {
     id?: number; 
-    name?: string;
+    name: string = '';
     imageURL?: string;
     price?: number;
     code?: string;
