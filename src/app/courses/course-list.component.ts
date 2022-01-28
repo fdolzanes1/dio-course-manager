@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../model/course';
+import { Course } from 'src/model/course';
 
 @Component({
   selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
+  templateUrl: './course-list.component.html'
 })
 export class CourseListComponent implements OnInit {
 
@@ -16,23 +16,53 @@ export class CourseListComponent implements OnInit {
     this.courses = [
       {
         id: 1,
-        name: 'Angular',
-        imageURL: '',
+        name: 'Angular: Animations',
+        imageURL: '/assets/images/animations.png',
         price: 98.96,
-        code: 'ANG',
+        code: 'animations',
         duration: 120,
-        rating: 4.7,
+        rating: 4.9,
         releaseDate: 'January, 12'
       },
       {
         id: 2,
-        name: 'Ruby',
-        imageURL: '',
+        name: 'Angular: CLI',
+        imageURL: '/assets/images/cli.png',
         price: 151.22,
-        code: 'RUB',
+        code: 'cli',
         duration: 120,
-        rating: 4.8,
+        rating: 4.7,
         releaseDate: 'January, 16'
+      },
+      {
+        id: 3,
+        name: 'Angular: Forms',
+        imageURL: '/assets/images/forms.png',
+        price: 200.00,
+        code: 'forms',
+        duration: 120,
+        rating: 4.5,
+        releaseDate: 'January, 17'
+      },
+      {
+        id: 4,
+        name: 'Angular: Http',
+        imageURL: '/assets/images/http.png',
+        price: 111.32,
+        code: 'http',
+        duration: 120,
+        rating: 4.0,
+        releaseDate: 'January, 18'
+      },
+      {
+        id: 4,
+        name: 'Angular: Router',
+        imageURL: '/assets/images/router.png',
+        price: 80.17,
+        code: 'router',
+        duration: 120,
+        rating: 4.2,
+        releaseDate: 'January, 19'
       }
     ]
   }
