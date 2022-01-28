@@ -10,6 +10,7 @@ import { CourseListComponent } from './components/courses/course-list.component'
 import { NavBarComponent } from './components/navbar/navbar.component';
 import { StarComponent } from './components/stars/star.component';
 import { Page404Component } from './components/page404/page404.component';
+import { CourseInfoComponent } from './components/courses/course-info/course-info.component';
 
 
 
@@ -20,7 +21,8 @@ import { Page404Component } from './components/page404/page404.component';
     StarComponent,
     ReplacePipe,
     NavBarComponent,
-    Page404Component
+    Page404Component,
+    CourseInfoComponent
   ],
   imports: [
     BrowserModule,
