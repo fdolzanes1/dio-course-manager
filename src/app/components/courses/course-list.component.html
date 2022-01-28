@@ -15,6 +15,7 @@
             <th>Code</th>
             <th>Release Date</th>
             <th>Rating</th>
+            <th>Options</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,9 @@
             <th>{{ course.releaseDate | date: 'dd/MM/yyyy' }} </th>
             <td>
                 <app-star [rating]="course.rating"></app-star>
+            </td>
+            <td>
+                <a [routerLink]="['/course/info', course.id]" class="btn btn-primary">Edit</a>
             </td>
         </tr>
     </tbody>

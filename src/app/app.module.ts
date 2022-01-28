@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CourseListComponent } from './components/courses/course-list.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
 import { StarComponent } from './components/stars/star.component';
+import { Page404Component } from './components/page404/page404.component';
 
 
 
@@ -18,7 +19,8 @@ import { StarComponent } from './components/stars/star.component';
     CourseListComponent,
     StarComponent,
     ReplacePipe,
-    NavBarComponent
+    NavBarComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
