@@ -6,7 +6,18 @@ import { Course } from "src/app/model/course";
 })
 export class CourseService {
     retriveAll(): Course[] {
-        return COURSES;
+      return COURSES;
+    }
+
+    retriveById(id: number): Course | undefined  {
+      return COURSES.find((course:Course ) => course.id === id);
+    }
+
+    save(course: Course) {
+      if(course.id) {
+        const index = COURSES.findIndex( (courseIterator: Course) => courseIterator.id === course.id)
+        COURSES[index] = course;
+      }
     }
 }
 

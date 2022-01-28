@@ -1,1 +1,57 @@
-<h2>Course id = {{ courseId }}</h2>
+<h2>Course Info</h2>
+
+<hr/>
+
+<form #courseForm="ngForm">
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Name:</label>    
+        <div class="col-sm-10">
+            <input 
+                [ngClass]="{'is-invalid': courseName.invalid}" 
+                [(ngModel)]="course.name" 
+                required name="name" #courseName="ngModel" class="form-control">
+            <div class="invalid-feedback">
+                <span>Name is required</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Price:</label>    
+        <div class="col-sm-10">
+            <input 
+                [ngClass]="{'is-invalid': coursePrice.invalid}" 
+                [(ngModel)]="course.price" 
+                required name="price" #coursePrice="ngModel" class="form-control">
+            <div class="invalid-feedback">
+                <span>Price is required</span>
+            </div>
+        </div>     
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Rating:</label>    
+        <div class="col-sm-10">
+            <input 
+                [ngClass]="{'is-invalid': courseRating.invalid}" 
+                [(ngModel)]="course.rating" 
+                required name="rating" #courseRating="ngModel" class="form-control">
+            <div class="invalid-feedback">
+                <span>Rating is required</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Description:</label>    
+        <div class="col-sm-10">
+            <input 
+                [(ngModel)]="course.description" 
+                required name="description" #courseDescription="ngModel" class="form-control">
+        </div>
+    </div>
+
+    <button [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary mr-2">Save</button>
+    <button [routerLink]="['/courses']" class="btn btn-secondary">Back</button>
+</form>
