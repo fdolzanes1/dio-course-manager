@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from 'src/app/model/course';
+import { Course } from 'src/app/interface/course';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
@@ -20,8 +20,13 @@ export class CourseListComponent implements OnInit {
   }
 
   retriveAll(): void {
-    this._courses = this.courseService.retriveAll();
-    this.filteredCourses = this._courses;
+    this.courseService.retriveAll().subscribe({
+      next: courses => {
+        this._courses = courses;
+        this.filteredCourses = this._courses;
+      },
+      error: err => console.log(err)
+    });
   }
 
   set filter(value: string) {
