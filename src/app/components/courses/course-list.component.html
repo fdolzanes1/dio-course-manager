@@ -23,7 +23,7 @@
             <th><img [src]="course.imageURL" width="40"></th>
             <th>{{ course.name}}</th>
             <th>{{ course.price}}</th>
-            <td>{{ course.code || '' | replace: '-': ' ' }}</td>
+            <td>{{ course.code | replace: '-': ' ' }}</td>
             <th>{{ course.releaseDate | date: 'dd/MM/yyyy' }} </th>
             <td>
                 <app-star [rating]="course.rating"></app-star>
